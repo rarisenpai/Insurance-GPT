@@ -1,0 +1,6 @@
+llama-index
+openai
+streamlit
+pypdf
+streamlit-chat
+streamlit-extras
