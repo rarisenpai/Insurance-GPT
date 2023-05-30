@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two-Column Frontend</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .grid-container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+    
+    .column {
+      height: 100%;
+      border: none;
+    }
+    
+    .column iframe {
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="column">
+      <iframe src="https://balunos.com/hundeunfallversicherung/" class="embed-site"></iframe>
+    </div>
+    <div class="column">
+      <iframe src="https://rarisenpai-insurance-gpt-ui-b2kjz7.streamlit.app/?embed=true" class="embed-site"></iframe>
+    </div>
+  </div>
+</body>
+</html>
+
