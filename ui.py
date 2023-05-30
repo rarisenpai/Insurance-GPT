@@ -12,7 +12,7 @@ with st.sidebar:
 if choice == "Upload document":
     st.subheader("Please upload the document you want questions answered from?")
     # Upload the document
-    uploaded_files = st.file_uploader("Upload Document", type=["pdf", "docx"], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload Document", type=["pdf", "docx","txt"], accept_multiple_files=True)
 
     if uploaded_files is not None:
         # Create a directory to save uploaded files
@@ -23,6 +23,7 @@ if choice == "Upload document":
             file_path = os.path.join("data", uploaded_file.name)
             with open(file_path, "wb") as file:
                 file.write(uploaded_file.getvalue())
+
 
 elif choice == "Ask a question":
     if 'generated' not in st.session_state:
@@ -58,5 +59,5 @@ elif choice == "Ask a question":
 
         if st.session_state['generated']:
             for i in range(len(st.session_state['generated'])):
-                message(st.session_state['past'][i], is_user=True)
-                message(str(st.session_state["generated"][i]))
+                message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
+                message(str(st.session_state["generated"][i]), key=str(i))
