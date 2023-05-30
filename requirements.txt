@@ -4,3 +4,4 @@ streamlit
 pypdf
 streamlit-chat
 streamlit-extras
+psutil
