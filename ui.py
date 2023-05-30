@@ -25,6 +25,7 @@ if choice == "Upload document":
                 file.write(uploaded_file.getvalue())
 
         st.success("Documents uploaded successfully!")
+        uploaded_files = None
 
 elif choice == "Ask a question":
     if 'generated' not in st.session_state:
